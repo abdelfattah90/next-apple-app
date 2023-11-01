@@ -1,0 +1,31 @@
+{
+  "navlinks": {
+    "home": "Home",
+    "store": "Store",
+    "ipad": "iPad",
+    "iphone": "iPhone",
+    "watch": "Watch",
+    "airpods": "AirPods",
+    "tv": "TV & Home"
+  },
+
+  "homePage": {
+    "w1": "iPhone 15 Pro",
+    "w2": "Titanium. So strong. So light. So Pro",
+    "w3": "iPhone 15",
+    "w4": "New camera. New design. Newphoria",
+    "w5": "WATCH",
+    "w6": "SERIES 9",
+    "w7": "Smarter. Brighter. Mightier",
+    "w8": "iPad",
+    "w9": "Loveable. Drawable. Magical",
+    "w10": "MacBook Air 15”",
+    "w11": "Impressively big. Impossibly thin",
+    "w12": "Trade In",
+    "w13": "Get $200-$650 in credit",
+    "w14": "when you trade in iPhone 11 or higher",
+    "w15": "iMac",
+    "w16": "Packed with more juice",
+    "w17": "Available starting 11.7"
+  }
+}
