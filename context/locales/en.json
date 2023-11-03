@@ -3,10 +3,13 @@
     "home": "Home",
     "store": "Store",
     "ipad": "iPad",
+    "mac": "Mac",
     "iphone": "iPhone",
     "watch": "Watch",
     "airpods": "AirPods",
-    "tv": "TV & Home"
+    "tv": "TV & Home",
+    "vision": "Vision",
+    "accessories": "Accessories"
   },
 
   "homePage": {

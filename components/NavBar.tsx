@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaSearch } from 'react-icons/fa'
 import LanguageToggle from '@/components/LanguageToggle'
 
 const NavLink: FC<{ href: string; text: string }> = ({ href, text }) => (
@@ -39,17 +39,22 @@ const NavBar: FC<NavBarProps> = () => {
     >
       <div className='flex flex-wrap items-center justify-between'>
         <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
-          <Link className='flex items-center' href='/'>
-            <Image src='/apple-logo.png' alt='Apple' width={30} height={30} />
-          </Link>
-
           <button
             className='cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
             type='button'
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
-            <FaBars className='text-slate-300' />
+            <FaBars className='text-white' />
           </button>
+          <Link
+            href='/'
+            className='m-1 mx-4 p-1 flex items-center text-white hover:opacity-50'
+          >
+            <div className='lg:hidden text-center w-full'>
+              <Image src='/apple-logo.png' alt='Apple' width={20} height={20} />
+            </div>
+          </Link>
+          <LanguageToggle />
         </div>
         <div
           className={`lg:flex flex-grow items-center ${
@@ -58,18 +63,38 @@ const NavBar: FC<NavBarProps> = () => {
           id='example-navbar-danger'
         >
           <ul className='flex flex-col lg:flex-row list-none lg:ml-auto lg:mx-auto'>
-            <NavLink href='/' text={t('navlinks.home')} />
-            <NavLink href='/store' text={t('navlinks.store')} />
-            <NavLink href='/ipad' text={t('navlinks.ipad')} />
-            <NavLink href='/iphone' text={t('navlinks.iphone')} />
-            <NavLink href='/watch' text={t('navlinks.watch')} />
-            <NavLink href='/airpods' text={t('navlinks.airpods')} />
-            <NavLink href='/tv' text={t('navlinks.tv')} />
-          </ul>
+            <li>
+              <Link
+                href='/'
+                className='m-1 mx-4 p-1 flex items-center text-white hover:opacity-50'
+              >
+                <Image
+                  src='/apple-logo.png'
+                  alt='Apple'
+                  width={20}
+                  height={20}
+                />
+              </Link>
+            </li>
 
-          <div className='ml-auto md:ml-0'>
-            <LanguageToggle />
-          </div>
+            <NavLink href='/' text={t('navlinks.home')} />
+            <NavLink href='/' text={t('navlinks.store')} />
+            <NavLink href='/' text={t('navlinks.ipad')} />
+            <NavLink href='/' text={t('navlinks.mac')} />
+            <NavLink href='/' text={t('navlinks.iphone')} />
+            <NavLink href='/' text={t('navlinks.watch')} />
+            <NavLink href='/' text={t('navlinks.airpods')} />
+            <NavLink href='/' text={t('navlinks.tv')} />
+            <NavLink href='/' text={t('navlinks.vision')} />
+          </ul>
+        </div>
+        <div className='lg:flex items-center'>
+          <button
+            className='hidden lg:block m-1 p-1 text-white hover:opacity-50'
+            type='button'
+          >
+            <FaSearch />
+          </button>
         </div>
       </div>
     </nav>
