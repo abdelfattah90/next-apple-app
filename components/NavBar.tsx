@@ -26,7 +26,7 @@ const NavBar: FC<NavBarProps> = () => {
 
   return (
     <nav
-      className='w-full bg-zinc-800 p-2'
+      className='w-full p-2'
       style={{
         position: 'fixed',
         top: 0,
@@ -34,7 +34,7 @@ const NavBar: FC<NavBarProps> = () => {
         right: 0,
         zIndex: 1000,
         backdropFilter: 'blur(10px)',
-        backgroundColor: 'rgba(43, 43, 43, 0.507)',
+        backgroundColor: 'rgba(43, 43, 43, 0.711)',
       }}
     >
       <div className='flex flex-wrap items-center justify-between'>
@@ -46,14 +46,16 @@ const NavBar: FC<NavBarProps> = () => {
           >
             <FaBars className='text-white' />
           </button>
+
           <Link
             href='/'
-            className='m-1 mx-4 p-1 flex items-center text-white hover:opacity-50'
+            className='lg:hidden m-1 mx-4 p-1 flex items-center text-white'
           >
-            <div className='lg:hidden text-center w-full'>
+            <div className='text-center w-full'>
               <Image src='/apple-logo.png' alt='Apple' width={20} height={20} />
             </div>
           </Link>
+
           <LanguageToggle />
         </div>
         <div
@@ -63,10 +65,10 @@ const NavBar: FC<NavBarProps> = () => {
           id='example-navbar-danger'
         >
           <ul className='flex flex-col lg:flex-row list-none lg:ml-auto lg:mx-auto'>
-            <li>
+            <li className='hidden sm:hidden md:flex'>
               <Link
                 href='/'
-                className='m-1 mx-4 p-1 flex items-center text-white hover:opacity-50'
+                className='m-1 mx-4 p-1 flex items-center text-white'
               >
                 <Image
                   src='/apple-logo.png'

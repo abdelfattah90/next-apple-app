@@ -11,8 +11,7 @@ const LanguageToggle = () => {
     control: (styles, { isFocused }) => ({
       ...styles,
       border: 'none',
-      height: 5,
-      borderRadius: '5px',
+      borderRadius: '10px',
       boxShadow: isFocused ? 'none' : styles.boxShadow,
     }),
   }
